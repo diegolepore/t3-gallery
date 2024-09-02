@@ -4,6 +4,7 @@
 
 - [x] Make it deploy (Vercel)
 - [x] Scaffold casic UI with mock data
+- [x] Tidy up build process
 - [ ] Setup the database (Vercel Postgress)
 - [ ] Attach the database to the UI
 - [ ] Add authentication (w/ Clerk)
