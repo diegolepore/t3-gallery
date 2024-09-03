@@ -9,6 +9,7 @@
 - [x] Attach the database to the UI (building the actual schema for the database)
 - [x] Add authentication (w/ Clerk)
 - [ ] Add image upload
+- [ ] "tain" (server-only)
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/image page (Parallel Route)
 - [ ] Delete button (w/ Server Actions)
