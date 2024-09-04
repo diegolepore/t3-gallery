@@ -8,8 +8,9 @@
 - [x] Setup the database (Vercel Postgress)
 - [x] Attach the database to the UI (building the actual schema for the database)
 - [x] Add authentication (w/ Clerk)
-- [ ] Add image upload
+- [x] Add image upload
 - [ ] "tain" (server-only)
+- [ ] Use Next/Image component
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/image page (Parallel Route)
 - [ ] Delete button (w/ Server Actions)
