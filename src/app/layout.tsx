@@ -33,7 +33,7 @@ export default function RootLayout({
         />
         <body className="flex flex-col gap-4">
           <TopNav />
-          {children}
+          <main className="overflow-y-scroll">{children}</main>
         </body>
       </html>
     </ClerkProvider>
