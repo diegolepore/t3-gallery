@@ -10,12 +10,12 @@ async function ImageList() {
 
   return (
     <>
-      {images.map((image) => (
+      {[...images, ...images, ...images, ...images].map((image) => (
         <div key={image.id} className="w-48 h-48">
           <Link href={`/img/${image.id}`}>
             <Image src={image.url} style={{ objectFit: "contain" }} width={192} height={192} alt={image.name} />
           </Link>
-          <div>{image.name}</div>
+          <div className="truncate">{image.name}</div>
         </div>
       ))}
     </>
@@ -30,7 +30,7 @@ async function ImageList() {
    */
 export default function HomePage() {
   return (
-    <main className="flex flex-wrap justify-center gap-4">
+    <main className="flex flex-wrap justify-center gap-4 p-4">
       <SignedOut>
         <div className="w-full h-full text-2xl text-center">Please sign in to see images</div>
       </SignedOut>
