@@ -6,9 +6,6 @@ export default async function FullPageImageView(props: { id: number }) {
   const image = await getImageById(props.id);
 
   const uploaderInfo = await clerkClient.users.getUser(image.userId);
-
-  console.log('✅ image')
-  console.log(image)
   
   return (
   <div className="flex w-full h-full">
