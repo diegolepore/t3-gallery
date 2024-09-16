@@ -15,6 +15,6 @@
 - [x] Routing/image page (Parallel Route)
 - [x] Update upload button
 - [x] Shadui toast
+- [x] Basic Analytics with Posthog
 - [ ] Delete button (w/ Server Actions)
-- [ ] Analytics (Posthog)
 - [ ] Ratelimiting (Upstash)
