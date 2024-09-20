@@ -4,6 +4,7 @@ import { images } from "./db/schema";
 import { and, eq } from "drizzle-orm";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import analyticsServerClient from "./analytics";
 
 export async function getMyImages() {
   // This code runs on your server before upload
@@ -23,9 +24,10 @@ export async function getImageById(id: number) {
   const user = auth();
   if (!user.userId) throw new Error("Unauthorized");
 
-  const image = await db.query.images.findFirst({
-    where: (model, { eq }) => eq(model.id, id),
+  const image = await db.query.images.findFirst({ 
+    where: (model, { eq }) => eq(model.id, id) 
   });
+
   if (!image) throw new Error("Image not found");
 
   if (image.userId !== user.userId) throw new Error("Unauthorized");
@@ -45,6 +47,14 @@ export async function deleteImage(id: number) {
         eq(images.userId, user.userId)
       )
     );
+
+  analyticsServerClient.capture({
+    distinctId: user.userId,
+    event: "delete image",
+    properties: {
+      imageId: id,
+    },
+  });
 
   redirect("/");
 }
