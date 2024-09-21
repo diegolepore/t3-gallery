@@ -16,5 +16,5 @@
 - [x] Update upload button
 - [x] Shadui toast
 - [x] Basic Analytics with Posthog
-- [ ] Delete button (w/ Server Actions)
-- [ ] Ratelimiting (Upstash)
+- [x] Delete button (w/ Server Actions)
+- [x] Ratelimiting (Upstash)
